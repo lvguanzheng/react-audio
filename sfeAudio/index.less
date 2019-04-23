@@ -1,0 +1,112 @@
+.new-audio{
+    height: 36px;
+    width: 380px;
+    background: #F9FBFF;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+}
+.new-audio-time{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #242424;
+    letter-spacing: 0;
+    line-height: 14px;
+    margin-left: 12px;
+    margin-right: 12px;
+    span{
+        display: inline-block;
+    }
+    span:first-child{
+        text-align: left;
+        min-width: 25px;
+    }
+    span:last-child{
+        text-align: right;
+        min-width: 25px;
+    }
+}
+.current-time{
+    color: #3C8CE9;
+}
+.sound-control-icon{
+    margin-left: 20px;
+    width: 20px;
+    height: 18px;
+    cursor: pointer;
+}
+.no-sound-icon{
+    margin-left: 20px;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+}
+.audio-progress{
+    outline: none;
+    -webkit-appearance: none;
+    width: 200px !important;
+    height: 4px;
+    background: #D2E7FF;
+    border-radius: 20px;
+}
+.audio-progress::-webkit-slider-runnable-track{
+    cursor: pointer;
+}
+.audio-progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(-270deg, #6EBFF6 0%, #3D8DEA 100%);
+    box-shadow: 0 0 4px 0 rgba(62,142,235,0.40);
+    border-radius: 20px;
+    cursor: pointer;
+}
+@keyframes shine{
+    from {
+        box-shadow: 0 0 0 0 #1890ff;
+    }
+    to {
+        box-shadow: 0 0 6px 0 #1890ff;
+    }
+}
+.icon-load{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #989898;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.icon-pause{
+    .icon-load;
+    border: 1px solid #1890ff;
+}
+.icon-playing{
+    .icon-pause;
+    animation: shine 1s linear infinite alternate;
+}
+.load-triangle{
+    height: 0px;
+    width: 0px;
+    border-left: 8px solid #989898;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    position: absolute;
+    left: 6px;
+}
+.pause-triangle{
+    .load-triangle;
+    border-left: 8px solid #1890ff;
+}
+.playing-line{
+    width: 6px;
+    height: 8px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #1890ff;
+    border-right: 1px solid #1890ff;
+}
